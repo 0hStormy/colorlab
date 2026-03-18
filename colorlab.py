@@ -49,6 +49,11 @@ class Oklab:
 
     @staticmethod
     def from_srgb(rgb: Rgb):
+        """
+        Converts sRGB type to oklab type.
+        Formula based on the work of Björn Ottosson:
+        https://bottosson.github.io/posts/oklab/
+        """
         linear_rgb = LinearRgb.from_srgb(rgb)
 
         # Adjust colors to account for human perception
